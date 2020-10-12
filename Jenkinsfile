@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('cmake') {
       steps {
-        cmake(installation: 'Test')
+        cmakeBuild(cleanBuild: true, installation: 'inSearchPath', buildDir: 'build', buildType: 'Debug', generator: 'Unix Makefiles')
       }
     }
 
