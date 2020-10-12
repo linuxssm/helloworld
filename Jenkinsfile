@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('cmake') {
+    stage('') {
       steps {
-        cmakeBuild(cleanBuild: true, installation: 'inSearchPath', buildDir: 'build', buildType: 'Debug', generator: 'Unix Makefiles', sourceDir: 'helloworld')
+        cmakeBuild(installation: 'inSearchPath', buildDir: 'build', cleanBuild: true, sourceDir: 'helloworld')
       }
     }
 
